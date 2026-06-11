@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HealthConnect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>HealthConnect</h1>
+
+    <h3>Patient Support Form</h3>
+
+    <form action="/submit" method="POST">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Enter Name"
+            required>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter Email"
+            required>
+
+        <input
+            type="number"
+            name="age"
+            placeholder="Enter Age"
+            required>
+
+        <input
+            type="text"
+            name="phone"
+            placeholder="Enter Phone Number"
+            required>
+
+        <textarea
+            name="concern"
+            rows="5"
+            placeholder="Describe your health concern"
+            required></textarea>
+
+        <button type="submit">
+            Submit Concern
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

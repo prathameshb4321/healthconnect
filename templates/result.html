@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submission Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Submission Successful</h1>
+
+    <h2>Patient Summary</h2>
+
+    <p>{{ summary }}</p>
+
+    <h2>Detected Symptoms</h2>
+
+    {% if symptoms %}
+        <ul>
+            {% for symptom in symptoms %}
+                <li>{{ symptom }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No symptoms detected.</p>
+    {% endif %}
+
+    <h2>Possible Categories</h2>
+
+    {% if categories %}
+        <ul>
+            {% for category in categories %}
+                <li>{{ category }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No category detected.</p>
+    {% endif %}
+
+    <h2>Auto Response</h2>
+
+    <p>{{ auto_response }}</p>
+
+    <a href="/">Submit Another Response</a>
+
+</div>
+
+</body>
+</html>
